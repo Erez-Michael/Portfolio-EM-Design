@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       htmlAttrs: { dir: 'ltr', lang: 'en', class: 'scroll-smooth' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Nichol - Nuxt 3 & Tailwind CSS Personal Portfolio Template' },
+        { name: 'description', content: 'EM Design - Nuxt 3 & Tailwind CSS Personal Portfolio Template' },
         { name: "keywords", content: "nuxt 3, tailwind css, portfolio, personal website, template" },
         { name: "author", content: "SRBThemes" }
       ],

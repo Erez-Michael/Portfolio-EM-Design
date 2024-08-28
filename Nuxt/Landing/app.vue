@@ -2,7 +2,7 @@
   <div>
     <NuxtLayout>
       <Head>
-        <Title>{{ title }} - Nichol Nuxt 3 & Tailwind CSS Personal Portfolio Templates</Title>
+        <Title>{{ title }} - Portfolio</Title>
         <link rel='icon' type='image/png' href='/favicon.png'>
       </Head>
       <NuxtPage />
@@ -11,12 +11,11 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onBeforeMount } from 'vue';
 
 defineProps({
   title: {
     type: String,
-    default: "Nichol"
+    default: "EM Design"
   }
 });
 </script>

@@ -1,6 +1,6 @@
 /*
 -------------------------------------------------------------------------
-* Template Name    : Nichol - Tailwind CSS Personal Portfolio Templates   * 
+* Template Name    : EM Design - Tailwind CSS Personal Portfolio Templates   * 
 * Author           : SRBThemes                                          *
 * Version          : 1.0.0                                              *
 * Created          : June 2023                                          *

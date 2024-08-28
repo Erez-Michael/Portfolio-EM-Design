@@ -5,7 +5,7 @@
                 <div class="flex items-center justify-between w-full">
                     <div class="relative z-50">
                         <a href="/">
-                            <img src="/images/em-logo.webp" alt="" class="h-10">
+                            <img src="@/assets/images/logo-light.svg" alt="" class="h-10">
                         </a>
                     </div>
                     <div class="flex items-center gap-5 lg:hidden">

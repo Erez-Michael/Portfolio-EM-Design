@@ -265,7 +265,7 @@
                                         </div>
                                         <div class="mt-7">
                                             <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-12">
-                                                <span class="text-xl font-semibold">Nichol Theme</span>
+                                                <span class="text-xl font-semibold">EM Design Theme</span>
                                                 <span class="font-semibold text-purple">2020 - 2021</span>
                                             </div>
                                             <p class="mt-5 text-gray">Developing the visual style and aesthetic elements of the interface, including color schemes, typography, icons, and imagery. This involves creating a consistent and visually pleasing design language that aligns with the brand.</p>
