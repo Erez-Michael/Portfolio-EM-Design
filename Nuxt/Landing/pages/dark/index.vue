@@ -8,16 +8,18 @@ onBeforeMount(() => {
 </script>
 
 <template>
-    <section class="pt-[100px] relative overflow-hidden" id="home">
-        <div class="container">
-            <div class="grid grid-cols-1">
-                <div class="flex flex-col flex-wrap items-center gap-5 lg:flex-row">
-                    <div class="w-full lg:w-1/2">
-                        <div class="py-16 md:py-24" data-aos="fade-up">
-                            <p class="text-warning bg-warning/[14%] font-semibold text-lg inline-block p-2.5">Hi! I'm Mitchell Hancock</p>
-                            <h1 class="mt-6 md:mt-8 font-bold text-3xl/normal md:text-[50px]/normal">Freelance UI/UX Designer</h1>
-                            <p class="text-gray mt-6 max-w-[571px] leading-loose">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <div class="flex flex-wrap gap-5 mt-10">
+    <div>
+
+        <section class="pt-[100px] relative overflow-hidden" id="home">
+            <div class="container">
+                <div class="grid grid-cols-1">
+                    <div class="flex flex-col flex-wrap items-center gap-5 lg:flex-row">
+                        <div class="w-full lg:w-1/2">
+                            <div class="py-16 md:py-24" data-aos="fade-up">
+                                <p class="text-warning bg-warning/[14%] font-semibold text-lg inline-block p-2.5">Hi! I'm Mitchell Hancock</p>
+                                <h1 class="mt-6 md:mt-8 font-bold text-3xl/normal md:text-[50px]/normal">Freelance UI/UX Designer</h1>
+                                <p class="text-gray mt-6 max-w-[571px] leading-loose">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                <div class="flex flex-wrap gap-5 mt-10">
                                 <a href="javascript:;" class="flex items-center gap-2.5 btn btn-purple">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path opacity="0.2" d="M18 9C18 10.1867 17.6481 11.3467 16.9888 12.3334C16.3295 13.3201 15.3925 14.0892 14.2961 14.5433C13.1997 14.9974 11.9933 15.1162 10.8295 14.8847C9.66557 14.6532 8.59648 14.0818 7.75736 13.2426C6.91825 12.4035 6.3468 11.3344 6.11529 10.1705C5.88378 9.00666 6.0026 7.80026 6.45673 6.7039C6.91085 5.60754 7.67989 4.67047 8.66658 4.01118C9.65328 3.35189 10.8133 3 12 3C13.5913 3 15.1174 3.63214 16.2426 4.75736C17.3679 5.88258 18 7.4087 18 9Z" fill="currentColor" />
@@ -66,7 +68,7 @@ onBeforeMount(() => {
         </div>
     </section>
     <!-- home section -->
-
+    
     <!-- Start About me -->
     <section class="py-16 md:py-24 border-t-2 border-gray/[12%] dark:border-white/[12%]" id="about">
         <div class="container" data-aos="fade-up">
@@ -144,5 +146,6 @@ onBeforeMount(() => {
             </div>
         </div>
     </section>
+</div>
     <!-- End About me -->
 </template>

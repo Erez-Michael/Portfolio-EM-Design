@@ -14,32 +14,47 @@
                             Services
                         </p>
                     </div>
-                    <h2 class="font-semibold text-[26px]/normal mt-7">Services I Offer</h2>
-                    <p class="mt-5 text-gray max-w-[708px] mx-auto">We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning .</p>
+                    <h2 class="font-semibold text-[26px]/normal mt-7">Services Offered</h2>
+                    <p class="mt-5 text-gray max-w-[708px] mx-auto">I craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning .</p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-14 gap-7">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mt-14 gap-7">
                 <div class="border-2 border-gray/[12%] p-7 space-y-5 bg-gradient-liner from-white/[4%] to-transparent" data-aos="fade-up">
                     <div>
                         <img src="@/assets/images/services-1.svg" alt="">
                     </div>
-                    <h3 class="text-xl font-semibold">UI/UX Design</h3>
-                    <p class="text-gray">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <h3 class="text-xl font-semibold">Web Development</h3>
+                    <p class="text-gray">I create responsive and high-performance websites using modern frameworks like React, Next.js, Vue, and Nuxt, ensuring a seamless and engaging user experience.</p>
                 </div>
                 <div class="border-2 border-gray/[12%] p-7 space-y-5 bg-gradient-liner from-white/[4%] to-transparent" data-aos="fade-up">
                     <div>
                         <img src="@/assets/images/services-2.svg" alt="">
                     </div>
-                    <h3 class="text-xl font-semibold">Graphic Design</h3>
-                    <p class="text-gray">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <h3 class="text-xl font-semibold">Frontend Development</h3>
+                    <p class="text-gray">Specializing in crafting dynamic, responsive websites with tools like Tailwind CSS, turning complex designs into smooth, engaging user experiences.</p>
                 </div>
                 <div class="border-2 border-gray/[12%] p-7 space-y-5 bg-gradient-liner from-white/[4%] to-transparent" data-aos="fade-up">
                     <div>
                         <img src="@/assets/images/services-3.svg" alt="">
                     </div>
-                    <h3 class="text-xl font-semibold">Motion Design</h3>
-                    <p class="text-gray">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <h3 class="text-xl font-semibold">Backend Development & APIs</h3>
+                    <p class="text-gray">Developing powerful server-side applications and RESTful APIs with Node.js, integrating databases like MongoDB to ensure your applications run efficiently.</p>
                 </div>
+                <div class="border-2 border-gray/[12%] p-7 space-y-5 bg-gradient-liner from-white/[4%] to-transparent" data-aos="fade-up">
+                    <div>
+                        <img src="@/assets/images/services-1.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold">Content Management Systems (CMS)
+                    </h3>
+                    <p class="text-gray">Expertise in setting up and customizing CMS platforms like Directus and WordPress, providing you with flexible, easy-to-manage solutions for your content needs.</p>
+                </div>
+                <div class="border-2 border-gray/[12%] p-7 space-y-5 bg-gradient-liner from-white/[4%] to-transparent" data-aos="fade-up">
+    <div>
+        <img src="@/assets/images/services-2.svg" alt="">
+    </div>
+    <h3 class="text-xl font-semibold">SEO Optimization</h3>
+    <p class="text-gray">Enhance your online visibility with strategic SEO services. From on-page optimization to keyword research and analytics, we ensure your site ranks high and attracts the right audience.</p>
+</div>
             </div>
         </div>
     </section>

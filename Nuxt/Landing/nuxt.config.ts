@@ -11,14 +11,25 @@ export default defineNuxtConfig({
         { name: "author", content: "SRBThemes" }
       ],
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }]
-
     },
   },
+  modules: [
+    '@nuxt/image',
+  ],
   css: [
     "~/assets/css/style.css",
     "~/assets/css/tailwind.css",
   ],
   plugins: [
     { src: "~/plugins/alpine.ts", mode: "client" },
-  ],
-})
+  ],  
+  build: {
+    transpile: ["vue-countup-v3"],
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+});
