@@ -74,7 +74,7 @@ onMounted(() => {
             <Skill />
             <Work />
             <Testimonial />
-            <Blog />
+            
             <Footer />
         </div>
         <div class="fixed z-50 flex flex-col gap-3 ltr:left-0 rtl:right-0 bottom-3 lg:top-1/4">
