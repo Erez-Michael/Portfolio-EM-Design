@@ -1,5 +1,5 @@
 <template>
-    <BNav
+    <Section
       class="fixed top-0 z-50 w-full border-b-2 mobile-menu-bg py-7 bg-dark mobile-nav stickyadd border-white/10"
       id="navbar"
     >
@@ -168,7 +168,7 @@
           </div>
         </div>
       </div>
-    </BNav>
+    </Section>
   </template>
   
   <script>

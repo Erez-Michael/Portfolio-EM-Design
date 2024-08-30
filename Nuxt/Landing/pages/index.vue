@@ -6,12 +6,8 @@
                     <div class="flex flex-col flex-wrap justify-between items-center lg:flex-row ">
                         <div class="w-full lg:w-1/2">
                             <div class="py-16 md:py-24" data-aos="fade-up">
-                                <div class="text-warning bg-warning/[14%] w-fit -rotate-6 shadow-xl rounded-tl-xl rounded-br-xl rounded-tr-xl border border-purple/[9%]">
+                              <BaseTitle text1="Hi I'm" text2=" Erez Michael" :isInverted="true" maxWidth="360px"/>
 
-                                    <p class=" font-semibold text-2xl lg:text-3xl inline-block p-2.5 ">
-                                        Hi! I'm <span class="text-outline">Erez Michael</span>
-                                    </p>
-                                </div>
 
                                 <h1 class="mt-6 md:mt-12 font-bold text-3xl/normal md:text-[50px]/normal">Freelance Web Developer</h1>
                                 <p class="text-gray mt-6 max-w-[571px] leading-loose">Passionate Web Developer specializing in creating dynamic, user-focused websites and applications that blend creativity with robust functionality.</p>
@@ -88,16 +84,11 @@
     <!-- Content container -->
     <div class="flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
       <!-- Rotated "About Me" box -->
-      <div
-        class="text-warning bg-warning/[14%] w-fit flex justify-start -rotate-6 shadow-xl rounded-tl-xl rounded-br-xl rounded-tr-xl border border-purple/[9%] mt-12 lg:my-auto"
-      >
-        <p class="font-semibold text-2xl lg:text-3xl inline-block p-2.5">
-          About <span class="text-outline">Me</span>
-        </p>
-      </div>
+      <BaseTitle text1="About" text2=" Me"/>
+
       <!-- Description text -->
-      <div class="mt-7 lg:mt-0 lg:ml-5 lg:w-4/5 leading-relaxed">
-        <p class="text-gray">
+      <div class="mt-7 lg:mt-0 lg:ml-5 lg:w-4/5 leading-loose">
+        <p class="text-gray ">
           I am a passionate web developer dedicated to building seamless and impactful digital experiences. From
           developing dynamic websites to crafting powerful backend solutions and setting up efficient content management
           systems, I focus on delivering high-quality, scalable results that drive success for your brand.

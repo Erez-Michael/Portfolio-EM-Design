@@ -5,12 +5,7 @@
             <div class="grid grid-cols-1" data-aos="fade-up">
                 <div class="text-center space-y-12">
                     <div class="inline-block">
-                        <div class="text-warning bg-warning/[14%] w-fit flex justify-start -rotate-6 shadow-xl rounded-tl-xl rounded-br-xl rounded-tr-xl border border-purple/[9%]">
-
-<p class=" font-semibold text-2xl lg:text-3xl inline-block p-2.5 ">
-    Services <span class="text-outline">Offered</span>
-</p>
-</div>
+                    <BaseTitle text1="Services" text2=" Offered" maxWidth="300px"/>
                     </div>
                     <p class="mt-5 text-gray max-w-[708px] mx-auto">I craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning .</p>
                 </div>
