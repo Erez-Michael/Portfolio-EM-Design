@@ -1,6 +1,5 @@
 <template>
-    <!-- Start Skill & Awards -->
-    <section class="py-16 md:py-24 mb-6 bg-gray/5 dark:bg-gradient-radial dark:from-[#994FF5]/[6%] dark:to-[#FFC41F]/[6%]">
+    <section class="py-16 md:py-24 mb-6  ">
         <div class="container">
             <div class="grid grid-cols-1" data-aos="fade-up">
                 <div class="text-center">
@@ -42,9 +41,7 @@
                         </div>
                     </div>
                 </div>
-            
             </div>
         </div>
     </section>
-    <!-- End Skill & Awards -->
 </template>

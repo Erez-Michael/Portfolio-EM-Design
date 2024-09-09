@@ -1,6 +1,5 @@
 export const content = [
     "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
@@ -20,7 +19,7 @@ export const theme = {
             transparent: "transparent",
             current: "currentColor",
             purple: "#994FF5",
-            warning: "#FFC41F",
+            yellow: "#FFC41F",
             light: "#F8F7F6",
             dark: "#050C17",
             gray: "#7780A1",

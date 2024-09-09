@@ -1,78 +1,59 @@
 <template>
-  <div
-    class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
+  <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
     <div class="container relative">
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
           <div class="relative z-50">
             <a href="/">
-              <img src="@/assets/images/logo-light.svg" alt="" class="h-8 md:h-10">
+              <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-10" />
             </a>
           </div>
+          <!-- Mobile Toggle Button -->
           <div class="flex items-center gap-5 lg:hidden">
-            <!-- Mobile Toggle Button -->
             <ButtonMobileToggle />
           </div>
           <!-- Desktop Menu -->
           <div class="hidden lg:block">
             <ul class="flex items-center list-none space-x-7">
-              <li v-for="item in menuItems" :key="item.href" class="group relative"
-                :class="{ 'active-link': isActive(item.href) }">
-                <a @click="scrollToSection($event, item.href)" :href="item.href"
-                  class="link hover:cursor-pointer"
-                  :class="{ 'active-link': isActive(item.href) }">
+              <li v-for="item in menuItems" :key="item.href" :class="{ 'active-link': isActive(item.href) }">
+                <a @click="scrollToSection(item.href)" :href="item.href" class="link hover:cursor-pointer">
                   {{ item.text }}
-                  <span></span><span></span>
                 </a>
-                <ul v-if="item.subItems" class="desktop-dropdown-menu">
-                  <li v-for="subItem in item.subItems" :key="subItem.href" class="group relative">
-                    <a @click="scrollToSection($event, subItem.href)" :href="subItem.href"
-                      class="link sub-link p-2 block whitespace-nowrap"
-                      :class="{ 'active-sub-link': isActive(subItem.href) }">
-                      {{ subItem.text }}
-                    </a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <!-- Mobile Menu -->
-      <div :class="{ 'translate-x-0': menuVisible, 'translate-x-full': !menuVisible && isClosing }"
-        class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-50 transition-transform duration-300 ease-in-out">
+      <div
+        :class="{ 'translate-x-0': menuVisible, 'translate-x-full': !menuVisible && isClosing }"
+        class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-50 transition-transform duration-300 ease-in-out"
+        ref="mobileMenu"
+      >
         <div class="border-b border-primary-gray1">
           <a href="/">
-            <img src="@/assets/images/logo-black.svg" alt="" class="fixed top-8 left-5 h-8 md:h-10 z-40">
+            <img
+              src="@/assets/images/logo-black.svg"
+              alt="Logo"
+              class="fixed top-8 left-5 h-8 md:h-10 z-40"
+            />
           </a>
         </div>
         <div class="h-full px-5 overflow-y-auto no-scrollbar">
           <ul class="flex flex-col w-full h-full">
-            <li v-for="item in menuItems" :key="item.href" class="border-b border-primary-gray1">
-              <div v-if="!item.subItems"
-                class="uppercase text-[1.75em] font-future-earth font-extrabold flex cursor-pointer my-8">
-                <a @click="handleMenuItemClick(item.href)" :href="item.href"
-                  class="w-full text-left"
-                  :class="{ 'active-link-mobile': isActive(item.href) }">
-                  {{ item.text }}
-                </a>
-              </div>
-              <div v-else
-                class="uppercase tracking-widest text-[1.75em] font-future-earth font-extrabold flex justify-between cursor-pointer my-8"
-                @click="toggleDropdown(item.text, $event)">
+            <li
+              v-for="item in menuItems"
+              :key="item.href"
+              class="border-b border-primary-gray1"
+            >
+              <a
+                @click="handleMenuItemClick(item.href)"
+                :href="item.href"
+                class="w-full text-left uppercase text-[1.75em] font-future-earth font-extrabold flex cursor-pointer my-8"
+                :class="{ 'active-link-mobile': isActive(item.href) }"
+              >
                 {{ item.text }}
-                <span class="text-primary-gray1 font-thin transform scale-150"
-                  :class="{ 'rotate-45': isDropdownOpen(item.text) }">+</span>
-              </div>
-              <ul v-if="item.subItems" class="dropdown-menu" :class="{ open: isDropdownOpen(item.text) }">
-                <li v-for="subItem in item.subItems" :key="subItem.href" class="flex items-center h-12">
-                  <a @click="handleMenuItemClick(subItem.href)" :href="subItem.href"
-                    class="uppercase"
-                    :class="{ 'active-link-mobile': isActive(subItem.href) }">
-                    {{ subItem.text }}
-                  </a>
-                </li>
-              </ul>
+              </a>
             </li>
           </ul>
         </div>
@@ -81,98 +62,70 @@
   </div>
 </template>
 
-
 <script setup>
-import { ref, onMounted, onUnmounted, provide } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, provide, onMounted, onUnmounted } from 'vue';
 import gsap from 'gsap';
 
-const router = useRouter();
-
+// Define menu items for navigation
 const menuItems = [
-  { text: 'Home', href: '#home' },
   { text: 'About Me', href: '#about' },
   { text: 'Services', href: '#services' },
   { text: 'Projects', href: '#projects' },
-  { text: 'Testimonials', href: '#client' }
+  { text: 'Testimonials', href: '#testimonials' }
 ];
 
+// State for mobile menu visibility
 const menuVisible = ref(false);
 const isClosing = ref(false);
-const dropdowns = ref({});
-const activeSection = ref(''); // Holds the current active section
+const activeSection = ref('');
+const observer = ref(null);
+const mobileMenu = ref(null);
 
-const observer = ref(null); // Reference for the Intersection Observer
-
+// Provide menu states for ButtonMobileToggle to use
 provide('menuVisible', menuVisible);
 provide('isClosing', isClosing);
 
-const enableScroll = () => {
-  document.body.style.overflow = '';
+// Function to handle smooth scroll to sections
+const scrollToSection = (href) => {
+  const target = document.querySelector(href);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
 };
 
+// Function to handle menu item click
 const handleMenuItemClick = (href) => {
   isClosing.value = true;
-  const tl = gsap.timeline({
+  gsap.to(mobileMenu.value, {
+    x: '-100%',
+    duration: 0.5,
+    ease: 'power2.inOut',
     onComplete: () => {
       menuVisible.value = false;
       isClosing.value = false;
-      enableScroll();
-      gsap.to('.bar-1', { attr: { d: "M1,2 L11,2" }, ease: "power2.inOut" });
-      gsap.to('.bar-2', { autoAlpha: 1, ease: "power2.inOut" });
-      gsap.to('.bar-3', { attr: { d: "M1,8 L11,8" }, ease: "power2.inOut" });
-      router.push(href);
     }
   });
-
-  tl.to('.mobile-menu', { x: '-100%', ease: "power2.inOut", duration: 0.5 });
+  scrollToSection(href);
 };
 
-provide('handleMenuItemClick', handleMenuItemClick);
-
-const toggleDropdown = (section) => {
-  dropdowns.value[section] = !dropdowns.value[section];
+// Function to check active link
+const isActive = (href) => {
+  return href === `#${activeSection.value}`;
 };
 
-const isDropdownOpen = (section) => {
-  return dropdowns.value[section];
-};
-
-const props = defineProps({
-  enableOpacity: {
-    type: Boolean,
-    default: true
-  }
-});
-
-const handleScroll = () => {
-  if (props.enableOpacity) {
-    const scrollY = window.scrollY;
-    const height = window.innerHeight;
-    const newOpacity = 0.85 - scrollY / (height / 2);
-    if (scrollY === 0) {
-      setNavbarOpacity(0.85);
-    } else if (newOpacity <= 0) {
-      setNavbarOpacity(0);
-    } else {
-      setNavbarOpacity(Math.max(0, Math.min(0.85, newOpacity)));
-    }
-  }
-};
-
+// Intersection observer to track active sections
 const initIntersectionObserver = () => {
   observer.value = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          activeSection.value = entry.target.id; // Update active section based on the intersecting target
+          activeSection.value = entry.target.id;
         }
       });
     },
-    { threshold: [0.1, 0.5] } // Adjusted threshold for better sensitivity
+    { threshold: [0.1, 0.5] }
   );
 
-  // Observe each section
   menuItems.forEach((item) => {
     const section = document.querySelector(item.href);
     if (section) {
@@ -181,172 +134,28 @@ const initIntersectionObserver = () => {
   });
 };
 
-
-const isActive = (href) => {
-  return activeSection.value === href.substring(1); // Remove '#' from href for comparison
-};
-
+// Setup observer on mount
 onMounted(() => {
-  if (props.enableOpacity) {
-    window.addEventListener('scroll', handleScroll);
-  }
-
-  // Initialize the Intersection Observer
   initIntersectionObserver();
 });
 
+// Cleanup observer on unmount
 onUnmounted(() => {
-  if (props.enableOpacity) {
-    window.removeEventListener('scroll', handleScroll);
-  }
-
-  // Disconnect the observer to prevent memory leaks
-  if (observer.value) {
-    observer.value.disconnect();
-  }
+  if (observer.value) observer.value.disconnect();
 });
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .link {
-  @apply text-dark dark:text-white text-sm lg:text-[16px] relative justify-center overflow-hidden uppercase tracking-widest;
+  @apply text-white text-sm lg:text-[16px] relative justify-center overflow-hidden uppercase tracking-widest;
   transition: color 0.3s ease, font-weight 0.5s ease;
 }
 
+.active-link,
 .active-link-mobile {
-  @apply text-dark dark:text-white relative justify-center overflow-hidden uppercase tracking-widest;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-ul {
-  margin: auto;
-  padding: 0;
-  list-style: none;
-  text-align: left;
-}
-
-li {
-  display: block;
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
-
-.link,
-.sub-link,
-.active-link-mobile {
-  color: white !important; /* Ensures the text is white */
-}
-
-.active-link .link,
-.active-sub-link,
-.active-link-mobile {
-  color: #FFC41F !important; /* Active link color */
-  font-weight: bold !important; /* Font weight bold for active links */
-  transition: color 0.3s ease, font-weight 0.5s ease; /* Transition for smooth change */
-}
-
-
-a {
-  @apply text-dark dark:text-white; /* Make default text color white */
-  text-decoration: none;
-  letter-spacing: 0.2em;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  text-align: left;
-}
-
-
-a span,
-.nuxt-link-exact-active span,
-a::before,
-.nuxt-link-exact-active::before,
-a::after,
-.nuxt-link-exact-active::after {
-  position: absolute;
-  background: #FFC41F;
-  transform-origin: center;
-  transition: transform 1.5s ease-out;
-}
-
-a:hover span:first-child,
-.nuxt-link-exact-active:hover span:first-child,
-a:hover::before,
-.nuxt-link-exact-active:hover::before,
-a:hover span:last-child,
-.nuxt-link-exact-active:hover span:last-child,
-a:hover::after,
-.nuxt-link-exact-active:hover::after {
-  transform: scaleX(1);
-  transform: scaleY(1);
-  transition: transform 0.2s ease-in;
-}
-
-a span:first-child,
-.nuxt-link-exact-active span:first-child {
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1.5px;
-  transform: scaleX(0);
-}
-
-a:hover span:first-child,
-.nuxt-link-exact-active:hover span:first-child,
-a:hover::before,
-.nuxt-link-exact-active:hover::before,
-a:hover span:last-child,
-.nuxt-link-exact-active:hover span:last-child,
-a:hover::after,
-.nuxt-link-exact-active:hover::after {
-  transform: scaleX(1);
-  transform: scaleY(1);
-  transition-delay: 0s;
-}
-
-a span:first-child,
-.nuxt-link-exact-active span:first-child,
-a::before,
-.nuxt-link-exact-active::before {
-  transition-delay: 0s;
-}
-
-a span:last-child,
-.nuxt-link-exact-active span:last-child,
-a::after,
-.nuxt-link-exact-active::after {
-  transition-delay: 0.05s;
-}
-
-.active-link .link,
-.active-sub-link {
   color: #FFC41F !important;
-  font-weight: bold;
 }
 
-.active-link-mobile {
-  color: #ffffff !important;
-  font-weight: extrabold;
-}
-
-.active-link .nuxt-link-exact-active,
-.active-link a {
-  color: #ffffff !important;
-}
-
-/* Mobile Menu */
 .mobile-menu {
   transform: translateX(-100%);
 }
@@ -359,50 +168,12 @@ a::after,
   transform: translateX(100%);
 }
 
-.rotate-45 {
-  transform: rotate(45deg);
-  transition: transform 0.2s;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
-.dropdown-menu {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.dropdown-menu.open {
-  max-height: 500px;
-}
-
-/* Desktop Dropdown Menu */
-@media (min-width: 1024px) {
-  .desktop-dropdown-menu {
-    @apply absolute left-0 shadow-md rounded-tl-lg rounded-br-lg hidden;
-    min-width: 200px;
-    z-index: 50;
-  }
-
-  .group:hover .desktop-dropdown-menu {
-    @apply block;
-  }
-
-  .sub-link {
-    @apply p-2 block whitespace-nowrap;
-  }
-
-  .sub-link:hover,
-  .active-sub-link {
-    @apply bg-primary-gray3 rounded-tl-lg rounded-br-lg;
-  }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>
-
-

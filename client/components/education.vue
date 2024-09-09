@@ -39,7 +39,7 @@
                                         </div>
                                         <div class="mt-7">
                                             <div class="flex flex-col justify-end gap-4 lg:flex-row lg:items-center lg:gap-12">
-                                                <span class="font-semibold text-warning">2010 - 2012</span>
+                                                <span class="font-semibold text-yellow">2010 - 2012</span>
                                                 <span class="text-xl font-semibold">Msc IT Master Degree</span>
                                             </div>
                                             <p class="mt-5 text-gray">Harvard University is an educational institution that offers graduate, professional, and research programs in the fields of and public health.</p>
@@ -77,7 +77,7 @@
                                         <div class="mt-7">
                                             <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-12">
                                                 <span class="text-xl font-semibold">BCA Collage Complete Course</span>
-                                                <span class="font-semibold text-warning">2007 - 2010</span>
+                                                <span class="font-semibold text-yellow">2007 - 2010</span>
                                             </div>
                                             <p class="mt-5 text-gray">Columbia University is an educational institution that offers graduate, professional, and research programs in the fields of and public health.</p>
                                             <p class="mt-6 font-semibold">Columbia University, New York, NY, United States</p>
@@ -113,7 +113,7 @@
                                         </div>
                                         <div class="mt-7">
                                             <div class="flex flex-col justify-end gap-4 lg:flex-row lg:items-center lg:gap-12">
-                                                <span class="font-semibold text-warning">1999 - 2007</span>
+                                                <span class="font-semibold text-yellow">1999 - 2007</span>
                                                 <span class="text-xl font-semibold">High / Higher Secondary School</span>
                                             </div>
                                             <p class="mt-5 text-gray">Princeton University is an educational institution that offers graduate, professional, and research programs in the fields of and public health.</p>
@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="mt-7">
                                             <div class="flex flex-col justify-end gap-4 lg:flex-row lg:items-center lg:gap-12">
-                                                <span class="font-semibold text-warning">2016 - 2019</span>
+                                                <span class="font-semibold text-yellow">2016 - 2019</span>
                                                 <span class="text-xl font-semibold">Unity Technologies</span>
                                             </div>
                                             <p class="mt-5 text-gray">Interaction design: Defining and designing user interactions, micro interactions, animations, and transitions to enhance the usability and delightfulness of the product.</p>

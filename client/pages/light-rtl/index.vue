@@ -14,7 +14,7 @@ onBeforeMount(() => {
                 <div class="flex flex-col flex-wrap items-center gap-5 lg:flex-row">
                     <div class="w-full lg:w-1/2">
                         <div class="py-16 md:py-24" data-aos="fade-up">
-                            <p class="text-warning bg-warning/[14%] font-semibold text-lg inline-block p-2.5">Hi! I'm Mitchell Hancock</p>
+                            <p class="text-yellow bg-yellow/[14%] font-semibold text-lg inline-block p-2.5">Hi! I'm Mitchell Hancock</p>
                             <h1 class="mt-6 md:mt-8 font-bold text-3xl/normal md:text-[50px]/normal">Freelance UI/UX Designer</h1>
                             <p class="text-gray mt-6 max-w-[571px] leading-loose">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <div class="flex flex-wrap gap-5 mt-10">

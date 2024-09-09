@@ -1,7 +1,7 @@
 <template>
   <div
     :style="{ maxWidth: maxWidth }"
-    class="text-warning bg-warning/[14%] w-fit flex justify-start -rotate-6 shadow-xl rounded-tl-xl rounded-br-xl rounded-tr-xl border border-purple/[9%] mb-12"
+    class="text-yellow bg-yellow/[14%] w-fit flex justify-start -rotate-6 shadow-xl rounded-tl-xl rounded-br-xl rounded-tr-xl border border-purple/[9%] mb-12"
   >
     <p class="font-semibold text-3xl lg:text-3xl inline-block p-2.5">
       <span :class="{ 'text-outline': !isInverted }">{{ text1 }}</span>

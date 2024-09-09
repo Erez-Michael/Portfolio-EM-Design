@@ -1,6 +1,6 @@
 <template>
     <!-- Start Work -->
-    <section class="py-16 md:py-36" id="projects">
+    <section class="relative py-16 md:py-36 bg-gradient-to-t from-purple/[10%] to-white dark:bg-gradient-to-b dark:from-purple/[10%] dark:to-transparent" id="projects">
         <div class="container">
             <div class="grid grid-cols-1" data-aos="fade-up">
                 <div class="text-center">

@@ -2,7 +2,7 @@
     <transition @before-enter="beforeEnter" @enter="enter" @leave="leave">
       <div v-if="visible" @click="scrollToTop"
         :class="buttonClasses"
-        class="fixed left-[90%] md:left-[95%] transform -translate-x-1/2 bg-gradient-to-b from-primary-gray2 to-transparent p-2 rounded-full text-primary-black2 text-4xl lg:text-3xl flex items-center justify-center w-[1.25em] md:w-[1.65em] lg:w-[1.95em] h-[1.6em] md:h-[2em] lg:h-[2.4em] cursor-pointer">
+        class="fixed left-[90%] md:left-[95%] transform -translate-x-1/2 bg-gradient-to-b from-purple to-yellow p-2 rounded-full text-dark dark:text-dark text-4xl lg:text-3xl flex items-center justify-center w-[1.25em] md:w-[1.65em] lg:w-[1.95em] h-[1.6em] md:h-[2em] lg:h-[2.4em] cursor-pointer">
         <FontAwesomeIcon :icon="['fas', 'arrow-circle-up']" aria-hidden="true"
           class="w-10 h-10 md:w-14 md:h-14 text-primary-black transform -translate-y-[0.2em] hover:opacity-70" />
       </div>

@@ -22,13 +22,15 @@
     "aos": "^2.3.4",
     "gsap": "^3.12.5",
     "nuxt": "^3.10.1",
+    "nuxt-marquee": "^1.0.4",
     "swiper": "^11.0.6",
     "typed.js": "^2.1.0",
     "vue": "^3.4.15",
     "vue-countup-v3": "^1.4.2",
     "vue-flip": "^3.0.2",
     "vue-kinesis": "^2.0.5",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.17.3",
