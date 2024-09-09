@@ -1,6 +1,6 @@
 <template>
-    <!-- Start Education & Experiance -->
-    <section class="py-16 md:py-24">
+    <!-- Start Education & Experience -->
+    <section class="hidden py-16 md:py-24">
         <div class="container">
             <div class="grid grid-cols-1" data-aos="fade-up">
                 <div class="text-center">

@@ -2,12 +2,13 @@
 import { ref, onMounted } from 'vue';
 import AOS from 'aos';
 import Navbar from "../components/navbar.vue";
-import Service from "../components/service.vue";
+import Services from "../components/services.vue";
 import Testimonial from "../components/testimonial.vue";
 import Skill from "../components/skill.vue";
 import Education from "../components/education.vue";
-import Work from "../components/work.vue";
+import Projects from "../components/projects.vue";
 import Footer from "../components/footer.vue";
+import About from "../components/about.vue"
 import 'aos/dist/aos.css';
 
 // Define refs
@@ -94,10 +95,11 @@ onMounted(() => {
         <div class="bg-white text-dark dark:text-white dark:bg-dark">
             <Navbar />
             <slot />
-            <Service />
+            <About />
+            <Services />
             <Education />
             <Skill />
-            <Work />
+            <Projects />
             <Testimonial />
       <ButtonScrollToTop />
             

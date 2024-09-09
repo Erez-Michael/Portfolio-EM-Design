@@ -68,7 +68,7 @@ const testimonials = [
 
 <template>
   <!-- Start Testimonial -->
-  <section class="py-16 md:py-24 client-review bg-gray/5 dark:bg-white/[4%]" id="client">
+  <section class="py-16 md:py-36 client-review bg-gray/5 dark:bg-white/[4%]" id="client">
     <div class="container">
       <div class="grid grid-cols-1">
         <div class="items-end justify-between lg:flex space-y-7 lg:space-y-0" data-aos="fade-up">
