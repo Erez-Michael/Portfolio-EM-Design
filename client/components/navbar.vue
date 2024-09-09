@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
           <div class="relative z-50">
-            <a href="/">
+            <a href="#about">
               <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-10" />
             </a>
           </div>
@@ -103,14 +103,32 @@ const handleMenuItemClick = (href) => {
     onComplete: () => {
       menuVisible.value = false;
       isClosing.value = false;
+      resetButtonToHamburger();
     }
   });
   scrollToSection(href);
+  enableScroll();
 };
 
 // Function to check active link
 const isActive = (href) => {
   return href === `#${activeSection.value}`;
+};
+
+// Function to enable and disable scrolling
+const disableScroll = () => {
+  document.body.style.overflow = 'hidden';
+};
+
+const enableScroll = () => {
+  document.body.style.overflow = '';
+};
+
+// Function to reset the menu button to hamburger state
+const resetButtonToHamburger = () => {
+  gsap.to('.bar-1', { attr: { d: "M1,2 L11,2" }, ease: "power2.inOut" });
+  gsap.to('.bar-2', { autoAlpha: 1, ease: "power2.inOut" });
+  gsap.to('.bar-3', { attr: { d: "M1,8 L11,8" }, ease: "power2.inOut" });
 };
 
 // Intersection observer to track active sections
@@ -137,11 +155,13 @@ const initIntersectionObserver = () => {
 // Setup observer on mount
 onMounted(() => {
   initIntersectionObserver();
+  disableScroll();
 });
 
 // Cleanup observer on unmount
 onUnmounted(() => {
   if (observer.value) observer.value.disconnect();
+  enableScroll();
 });
 </script>
 

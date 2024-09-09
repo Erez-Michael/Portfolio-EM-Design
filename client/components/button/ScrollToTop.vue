@@ -19,14 +19,14 @@
   const atBottom = ref(false);
   
   const buttonClasses = computed(() => ({
-    'bottom-[16em]': atBottom.value,
+    'bottom-[0.55em]': atBottom.value,
     'bottom-[0.5em]': !atBottom.value,
-    'md:bottom-[8em]': atBottom.value,
+    'md:bottom-[0.5em]': atBottom.value,
     'md:bottom-[0.5em]': !atBottom.value,
   }));
   
   const handleScroll = () => {
-    const scrolled = window.innerHeight + window.scrollY >= document.body.offsetHeight -10;
+    const scrolled = window.innerHeight + window.scrollY >= document.body.offsetHeight -1;
     atBottom.value = scrolled;
   };
   
