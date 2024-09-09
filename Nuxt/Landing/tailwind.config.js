@@ -25,6 +25,18 @@ export const theme = {
             dark: "#050C17",
             gray: "#7780A1",
             white: "#FFFFFF",
+            primary: {
+                white: "#FFFFFF",
+                gray1: "#D3D3D3",
+                gray2: "#A9A9A9",
+                gray3: "#696969",
+                gray: "#7780A1",
+                blue: "#3BA5BE",
+                blue2: "#22464b",
+                green: "#203a3a",
+                green2:"#61a93a",
+                yellow: "#FFC41F"
+              }
         },
 
         backgroundSize: {

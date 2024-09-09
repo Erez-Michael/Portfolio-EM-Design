@@ -37,7 +37,7 @@ const testimonials = [
     company: "Ludmer Engineering",
     feedback:
       "The team provided a highly efficient design solution that helped us streamline our processes significantly. Their attention to detail and understanding of our needs were exceptional.",
-    image: "@/assets/images/testimonial/1.png",
+    image: "",
   },
   {
     project: "Duchesnay - Canada",
@@ -45,7 +45,7 @@ const testimonials = [
     company: "Duchesnay",
     feedback:
       "Working with them on the fertility app was an empowering experience. They understood our vision and translated it into a beautiful, user-friendly app that our users love.",
-    image: "@/assets/images/testimonial/2.png",
+    image: "",
   },
   {
     project: "Analog Pharma - Canada",
@@ -53,7 +53,7 @@ const testimonials = [
     company: "Analog Pharma",
     feedback:
       "The project surpassed all our expectations. The creativity and strategy involved in creating this application were unparalleled. A brilliant job by a brilliant team!",
-    image: "@/assets/images/testimonial/3.png",
+    image: "",
   },
   {
     project: "Sefon Surfboards - Peru",
@@ -61,7 +61,7 @@ const testimonials = [
     company: "Sefon Surfboards",
     feedback:
       "Our surfboards never looked better online! The website truly captures the spirit of our brand and has been a huge hit with our customers. Highly recommended!",
-    image: "@/assets/images/testimonial/4.png",
+    image: "",
   },
 ];
 </script>

@@ -15,6 +15,29 @@ const navbar = ref<HTMLElement | null>(null);
 const sections = ref<NodeListOf<HTMLElement> | null>(null);
 const navLi = ref<NodeListOf<HTMLElement> | null>(null);
 
+const isMobileMenuOpen = ref<boolean>(false);
+
+
+  // Toggle mobile menu function
+  const toggleMobileMenu = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+  };
+  
+  onMounted(() => {
+    document.body.classList.add("text-base", "antialiased", "font-normal", "font-lato");
+    document.documentElement.classList.add('dark');
+    AOS.init({
+      easing: 'ease-in-out-sine',
+      duration: 2000
+    });
+  
+    // Ensure the page always starts at the top on load and refresh
+    window.history.scrollRestoration = 'manual';
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Adding a timeout to ensure it executes after the browser's scroll restoration
+  });
+
 // Define reactive properties
 const direction = ref<'ltr' | 'rtl'>('ltr');
 const theme = ref<'light' | 'dark'>('light');
@@ -62,6 +85,8 @@ onMounted(() => {
         duration: 2000
     }); // Initialize AOS
 });
+
+
 </script>
 
 <template>
@@ -74,6 +99,7 @@ onMounted(() => {
             <Skill />
             <Work />
             <Testimonial />
+      <ButtonScrollToTop />
             
             <Footer />
         </div>

@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   ],
   plugins: [
     { src: "~/plugins/alpine.ts", mode: "client" },
+    { src: "~/plugins/gsap.client.ts", mode: "client" }
   ],  
   build: {
     transpile: ["vue-countup-v3"],

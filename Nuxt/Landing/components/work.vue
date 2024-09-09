@@ -1,6 +1,6 @@
 <template>
     <!-- Start Work -->
-    <section class="py-16 md:py-24" id="work">
+    <section class="py-16 md:py-24" id="projects">
         <div class="container">
             <div class="grid grid-cols-1" data-aos="fade-up">
                 <div class="text-center">
@@ -23,7 +23,7 @@
       </a>
       <p class="text-gray max-w-[420px] mt-3 md:mt-5">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
       <div class="inline-block mt-8">
-        <a href="https://www.ludmer-engineering.ca/" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-dark hover:text-white dark:border-white/[14%] dark:hover:bg-white dark:hover:text-dark">
+        <a href="https://www.ludmer-engineering.ca/" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-[#4588cb] hover:text-white dark:border-white/[14%] dark:hover:bg-[#4588cb] dark:hover:text-dark">
           View Project
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.0035 7.4083L5.41176 16L4 14.5882L12.5917 5.99654H5.01905V4H16V14.981H14.0035V7.4083Z" fill="currentColor" />
@@ -32,7 +32,9 @@
       </div>
     </div>
     <div class="xl:max-w-[670px] lg:max-w-[400px] w-full lg:order-2 order-1">
-      <img src="/images/ludmer.webp" class="object-cover w-full h-auto mx-auto" alt="Ludmer Engineering">
+      <a href="https://www.ludmer-engineering.ca/" target="_blank"  rel="noopener noreferrer">
+        <img src="/images/ludmer.webp" class="object-cover w-full h-auto mx-auto" alt="Ludmer Engineering">
+      </a>
     </div>
   </div>
 
@@ -53,7 +55,7 @@
         </div>
       </div> -->
       <div class="inline-block mt-8">
-        <a href="https://duchesnay.com/en" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-dark hover:text-white dark:border-white/[14%] dark:hover:bg-white dark:hover:text-dark">
+        <a href="https://duchesnay.com/en" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-[#72043f] hover:text-white dark:border-white/[14%] dark:hover:bg-[#72043f] dark:hover:text-dark">
           View Project
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.0035 7.4083L5.41176 16L4 14.5882L12.5917 5.99654H5.01905V4H16V14.981H14.0035V7.4083Z" fill="currentColor" />
@@ -62,7 +64,9 @@
       </div>
     </div>
     <div class="xl:max-w-[670px] lg:max-w-[400px] w-full lg:order-2 order-1">
-      <img src="/images/duchesnay.webp" class="object-cover w-full h-auto mx-auto" alt="Artisan Project">
+      <a href="https://duchesnay.com/en" target="_blank"  rel="noopener noreferrer">        
+        <img src="/images/duchesnay.webp" class="object-cover w-full h-auto mx-auto" alt="Artisan Project">
+      </a>
     </div>
   </div>
 
@@ -74,19 +78,9 @@
         Unlock the Mysteries of Fun and Strategy
       </a>
       <p class="text-gray max-w-[420px] mt-3 md:mt-5">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-      <!-- <div class="flex items-center gap-4 mt-5 md:mt-8">
-        <div class="border-2 border-gray/[14%] h-14 w-14 rounded-full flex items-center justify-center">
-          <img src="@/assets/images/figma-ex.svg" alt="Figma Icon">
-        </div>
-        <div class="border-2 border-gray/[14%] h-14 w-14 rounded-full flex items-center justify-center">
-          <img src="@/assets/images/ai-ex.svg" alt="Adobe Illustrator Icon">
-        </div>
-        <div class="border-2 border-gray/[14%] h-14 w-14 rounded-full flex items-center justify-center">
-          <img src="@/assets/images/ps-ex.svg" alt="Photoshop Icon">
-        </div>
-      </div> -->
+     
       <div class="inline-block mt-8">
-        <a href="https://analogpharma.ca/en" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-dark hover:text-white dark:border-white/[14%] dark:hover:bg-white dark:hover:text-dark">
+        <a href="https://analogpharma.ca/en" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-[#079779] hover:text-white dark:border-white/[14%] dark:hover:bg-[#079779] dark:hover:text-dark">
           View Project
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.0035 7.4083L5.41176 16L4 14.5882L12.5917 5.99654H5.01905V4H16V14.981H14.0035V7.4083Z" fill="currentColor" />
@@ -95,7 +89,9 @@
       </div>
     </div>
     <div class="xl:max-w-[670px] lg:max-w-[400px] w-full lg:order-2 order-1">
-      <img src="/images/analog.webp" class="object-cover w-full h-auto mx-auto" alt="Poker Queen Project">
+      <a href="https://analogpharma.ca/en" target="_blank"  rel="noopener noreferrer">
+        <img src="/images/analog.webp" class="object-cover w-full h-auto mx-auto" alt="Poker Queen Project">
+      </a>
     </div>
   </div>
 <!-- Sefon Surfboards -->
@@ -106,19 +102,8 @@
         Unlock the Mysteries of Fun and Strategy
       </a>
       <p class="text-gray max-w-[420px] mt-3 md:mt-5">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-      <!-- <div class="flex items-center gap-4 mt-5 md:mt-8">
-        <div class="border-2 border-gray/[14%] h-14 w-14 rounded-full flex items-center justify-center">
-          <img src="@/assets/images/figma-ex.svg" alt="Figma Icon">
-        </div>
-        <div class="border-2 border-gray/[14%] h-14 w-14 rounded-full flex items-center justify-center">
-          <img src="@/assets/images/ai-ex.svg" alt="Adobe Illustrator Icon">
-        </div>
-        <div class="border-2 border-gray/[14%] h-14 w-14 rounded-full flex items-center justify-center">
-          <img src="@/assets/images/ps-ex.svg" alt="Photoshop Icon">
-        </div>
-      </div> -->
       <div class="inline-block mt-8">
-        <a href="https://sefon-surfboards.vercel.app/" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-dark hover:text-white dark:border-white/[14%] dark:hover:bg-white dark:hover:text-dark">
+        <a href="https://sefon-surfboards.vercel.app/" target="_blank"  rel="noopener noreferrer" class="flex items-center gap-2.5 py-3.5 text-sm font-semibold px-5 border-2 border-dark duration-300 hover:bg-[#198da4] hover:text-white dark:border-white/[14%] dark:hover:bg-[#198da4] dark:hover:text-dark">
           View Project
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.0035 7.4083L5.41176 16L4 14.5882L12.5917 5.99654H5.01905V4H16V14.981H14.0035V7.4083Z" fill="currentColor" />
@@ -127,13 +112,15 @@
       </div>
     </div>
     <div class="xl:max-w-[670px] lg:max-w-[400px] w-full lg:order-2 order-1">
-      <img src="/images/sefon.webp" class="object-cover w-full h-auto mx-auto" alt="Sefon Surfboards website">
+      <a href="https://sefon-surfboards.vercel.app/" target="_blank"  rel="noopener noreferrer">
+        <img src="/images/sefon.webp" class="object-cover w-full h-auto mx-auto" alt="Sefon Surfboards website">
+      </a>
     </div>
   </div>
-
+<!-- 
   <div class="text-center" data-aos="fade-up">
     <a href="#" class="btn btn-dark">View All Projects</a>
-  </div>
+  </div> -->
 </div>
 
         </div>
