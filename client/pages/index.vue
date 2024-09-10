@@ -40,7 +40,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // Define reactive properties
-const theme = ref('light'); // Default theme is light
+const theme = ref('dark'); 
 const observer = ref(null);
 const activeSection = ref('');
 

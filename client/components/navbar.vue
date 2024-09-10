@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
           <div class="relative z-50">
-            <a href="#about">
+            <a href="#">
               <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-10" />
             </a>
           </div>
@@ -15,8 +15,15 @@
           <!-- Desktop Menu -->
           <div class="hidden lg:block">
             <ul class="flex items-center list-none space-x-7">
-              <li v-for="item in menuItems" :key="item.href" :class="{ 'active-link': isActive(item.href) }">
-                <a @click="scrollToSection(item.href)" :href="item.href" class="link hover:cursor-pointer">
+              <li
+                v-for="item in menuItems"
+                :key="item.href"
+                :class="{
+                  'active-link': isActive(item.href) && item.text !== 'About Me',
+                  '': item.text === 'About Me'
+                }"
+              >
+                <a @click="scrollToSection(item.href)" :href="item.href" class="link hover:cursor-pointer ">
                   {{ item.text }}
                 </a>
               </li>
@@ -32,13 +39,20 @@
       >
         <div class="border-b border-primary-gray1">
           <a href="/">
+            <!-- Logo for Light and Dark Mode -->
             <img
-              src="@/assets/images/logo-black.svg"
+              src="@/assets/images/logo-dark.svg"
               alt="Logo"
-              class="fixed top-8 left-5 h-8 md:h-10 z-40"
+              class="fixed top-8 left-5 h-8 md:h-10 z-40 block dark:hidden"
+            />
+            <img
+              src="@/assets/images/logo-light.svg"
+              alt="Logo"
+              class="fixed top-8 left-5 h-8 md:h-10 z-40 hidden dark:block"
             />
           </a>
         </div>
+
         <div class="h-full px-5 overflow-y-auto no-scrollbar">
           <ul class="flex flex-col w-full h-full">
             <li
@@ -61,6 +75,7 @@
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref, provide, onMounted, onUnmounted } from 'vue';
@@ -172,11 +187,11 @@ onUnmounted(() => {
 }
 
 .active-link {
-    color: #FFC41F !important;
-    -webkit-text-stroke: 0.75px black;
-  }
+  transform: translateY(10px); /* Moves the element 10px downward */
+  transition: transform 0.3s ease; /* Adds a smooth transition */
 
-.active-link,
+}
+
 .active-link-mobile {
   color: #FFC41F !important;
   -webkit-text-stroke: 0.75px black;

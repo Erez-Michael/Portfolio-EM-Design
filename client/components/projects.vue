@@ -31,7 +31,7 @@
         </a>
       </div>
     </div>
-    <div class="xl:max-w-[670px] lg:max-w-[400px] w-full lg:order-2 order-1">
+    <div class="xl:max-w-[670px] lg:max-w-[400px] w-full lg:order-2 order-1 ">
       <a href="https://www.ludmer-engineering.ca/" target="_blank"  rel="noopener noreferrer">
         <img src="/images/ludmer.webp" class="object-cover w-full h-auto mx-auto" alt="Ludmer Engineering">
       </a>

@@ -8,13 +8,14 @@
   
             <div class="w-full lg:w-2/3 my-24 2xl:my-24" data-aos="fade-up">
               
-              <BaseTitle text1="Hi I'm" text2=" Erez Michael" :isInverted="true" maxWidth="360px" />
-                <div class="">
-                  <h1 ref="typedElement" class="font-bold text-[26px] md:text-[50px]"></h1>
+              <BaseTitle text1="Hi I'm" text2=" Erez Michael" :isInverted="true" maxWidth="360px" marginBottom="50px"/>
+              <div class="">
+                <!-- Typing effect for h1 -->
+                <h1 ref="typedElement" class="font-bold text-[26px] md:text-[50px]"></h1>
 
-                  <p class="text-gray mt-6 max-w-[570px] leading-loose">Passionate Web Developer specializing in creating
-                    dynamic, user-focused websites and applications that blend creativity with robust functionality.</p>
-                  </div>
+                <!-- Typing effect for p -->
+                <p ref="typedParagraph" class="text-gray mt-6 max-w-[570px] leading-loose"></p>
+              </div>
                   
                   <div class="py-6 sm:py-auto">
                     
@@ -83,7 +84,7 @@
       <!-- Content container -->
       <div class="flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
         <!-- Rotated "About Me" box -->
-        <BaseTitle text1="About" text2=" Me" />
+        <BaseTitle text1="About" text2=" Me" marginBottom="30px"/>
         
         <!-- Description text -->
         <div class="md:mt-7 lg:mt-0 lg:ml-5 lg:w-4/5 leading-loose">
@@ -135,24 +136,41 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import Typed from 'typed.js';
 
-// Reference for the h1 element
+// References for the h1 and p elements
 const typedElement = ref(null);
-let typedInstance = null;
+const typedParagraph = ref(null);
+let typedInstance1 = null;
+let typedInstance2 = null;
 
 // Initialize Typed.js on component mount
 onMounted(() => {
-  typedInstance = new Typed(typedElement.value, {
+  // Typed.js for the h1 element
+  typedInstance1 = new Typed(typedElement.value, {
     strings: ['Freelance Web Developer'], // The text to be typed
-    typeSpeed: 100, // Typing speed in milliseconds
+    typeSpeed: 80, // Typing speed in milliseconds
+    showCursor: false, // Hides the cursor after typing
+    loop: false, // No looping, type only once
+  });
+
+  // Typed.js for the p element
+  typedInstance2 = new Typed(typedParagraph.value, {
+    strings: [
+      'Passionate Web Developer specializing in creating dynamic, user-focused websites and applications that blend creativity with robust functionality.',
+    ],
+    typeSpeed: 5, // Typing speed in milliseconds for the paragraph
+    startDelay: 2500, // Optional: Delay start for the paragraph to begin after the heading
     showCursor: false, // Hides the cursor after typing
     loop: false, // No looping, type only once
   });
 });
 
-// Cleanup Typed.js instance to avoid memory leaks
+// Cleanup Typed.js instances to avoid memory leaks
 onUnmounted(() => {
-  if (typedInstance) {
-    typedInstance.destroy();
+  if (typedInstance1) {
+    typedInstance1.destroy();
+  }
+  if (typedInstance2) {
+    typedInstance2.destroy();
   }
 });
 </script>

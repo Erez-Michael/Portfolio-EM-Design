@@ -73,8 +73,8 @@ const testimonials = [
       <div class="grid grid-cols-1">
         <div class="items-end justify-between lg:flex space-y-7 lg:space-y-0" data-aos="fade-up">
           <div>
-            <div class="inline-block mb-6">
-              <BaseTitle text1="Testimonials" />
+            <div class="inline-block">
+              <BaseTitle text1="Testimonials" marginBottom="50px"/>
             </div>
             <h2 class="font-semibold text-[26px]/normal mt-7">Illuminating Testimonials from Satisfied Clients</h2>
           </div>

@@ -1,7 +1,7 @@
 <template>
   <div
-    :style="{ maxWidth: maxWidth }"
-    class="text-yellow bg-yellow/[14%] w-fit flex justify-start -rotate-6 shadow-xl rounded-tl-xl rounded-br-xl rounded-tr-xl border border-purple/[9%] mb-12"
+    :style="{ maxWidth: maxWidth, marginBottom: marginBottom }"
+    class="text-yellow bg-yellow/[14%] w-fit flex justify-start -rotate-6 shadow-xl rounded-tl-xl rounded-br-xl rounded-tr-xl border border-purple/[9%]"
   >
     <p class="font-semibold text-3xl lg:text-3xl inline-block p-2.5">
       <span :class="{ 'text-outline': !isInverted }">{{ text1 }}</span>
@@ -30,6 +30,10 @@ defineProps({
   maxWidth: {
     type: String,
     default: '220px', 
+  },
+  marginBottom: {
+    type: String,
+    default: '24px', 
   },
 });
 </script>
