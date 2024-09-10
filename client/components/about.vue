@@ -10,7 +10,8 @@
               
               <BaseTitle text1="Hi I'm" text2=" Erez Michael" :isInverted="true" maxWidth="360px" />
                 <div class="">
-                  <h1 class="font-bold  text-[26px] md:text-[50px]">Freelance Web Developer</h1>
+                  <h1 ref="typedElement" class="font-bold text-[26px] md:text-[50px]"></h1>
+
                   <p class="text-gray mt-6 max-w-[570px] leading-loose">Passionate Web Developer specializing in creating
                     dynamic, user-focused websites and applications that blend creativity with robust functionality.</p>
                   </div>
@@ -128,6 +129,33 @@
   </section>
 </div>
 </template>
+
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import Typed from 'typed.js';
+
+// Reference for the h1 element
+const typedElement = ref(null);
+let typedInstance = null;
+
+// Initialize Typed.js on component mount
+onMounted(() => {
+  typedInstance = new Typed(typedElement.value, {
+    strings: ['Freelance Web Developer'], // The text to be typed
+    typeSpeed: 100, // Typing speed in milliseconds
+    showCursor: false, // Hides the cursor after typing
+    loop: false, // No looping, type only once
+  });
+});
+
+// Cleanup Typed.js instance to avoid memory leaks
+onUnmounted(() => {
+  if (typedInstance) {
+    typedInstance.destroy();
+  }
+});
+</script>
 
 <style scoped>
 .text-outline {
