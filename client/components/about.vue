@@ -5,9 +5,7 @@
       <div class="container">
         <div class="flex flex-col">
           <div class="flex flex-col justify-between items-center sm:flex-row">
-  
             <div class="w-full lg:w-2/3 my-24 2xl:my-24" data-aos="fade-up">
-              
               <BaseTitle text1="Hi I'm" text2=" Erez Michael" :isInverted="true" maxWidth="360px" marginBottom="50px"/>
               <div class="">
                 <!-- Typing effect for h1 -->
@@ -152,7 +150,6 @@ onMounted(() => {
     loop: false, // No looping, type only once
   });
 
-  // Typed.js for the p element
   typedInstance2 = new Typed(typedParagraph.value, {
     strings: [
       'Passionate Web Developer specializing in creating dynamic, user-focused websites and applications that blend creativity with robust functionality.',
