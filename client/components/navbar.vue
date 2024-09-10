@@ -49,7 +49,7 @@
               <a
                 @click="handleMenuItemClick(item.href)"
                 :href="item.href"
-                class="w-full text-left uppercase text-[1.75em] font-future-earth font-extrabold flex cursor-pointer my-8"
+                class="w-full text-left uppercase text-[1.75em] font-bold flex cursor-pointer my-8"
                 :class="{ 'active-link-mobile': isActive(item.href) }"
               >
                 {{ item.text }}
@@ -171,9 +171,15 @@ onUnmounted(() => {
   transition: color 0.3s ease, font-weight 0.5s ease;
 }
 
+.active-link {
+    color: #FFC41F !important;
+    -webkit-text-stroke: 0.75px black;
+  }
+
 .active-link,
 .active-link-mobile {
   color: #FFC41F !important;
+  -webkit-text-stroke: 0.75px black;
 }
 
 .mobile-menu {

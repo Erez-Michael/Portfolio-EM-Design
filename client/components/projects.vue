@@ -1,11 +1,11 @@
 <template>
     <!-- Start Work -->
-    <section class="relative py-16 md:py-36 bg-gradient-to-t from-purple/[10%] to-white dark:bg-gradient-to-b dark:from-purple/[10%] dark:to-transparent" id="projects">
+    <section class="relative pt-36 md:py-36 bg-gradient-to-t from-purple/[10%] to-white dark:bg-gradient-to-b dark:from-purple/[10%] dark:to-transparent" id="projects">
         <div class="container">
             <div class="grid grid-cols-1" data-aos="fade-up">
                 <div class="text-center">
                     <div class="inline-block mb-6">
-                      <BaseTitle text1="Selected" text2=" Projects" :isInverted="true" />
+                      <BaseTitle text1="Selected" text2=" Projects" :isInverted="true" maxWidth="280px"/>
 
                     </div>
                     <h2 class="font-semibold text-[26px]/normal mt-7">Showcasing My Remarkable Projects</h2>

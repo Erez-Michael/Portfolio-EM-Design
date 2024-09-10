@@ -1,7 +1,7 @@
 <template>
     <!-- Start Services -->
     <section
-        class="py-16 md:py-36 text-white bg-gradient-to-b from-purple/[10%] to-white dark:bg-gradient-to-b dark:from-purple/[10%] dark:to-transparent"
+        class="pt-36 md:py-36 text-white bg-gradient-to-b from-purple/[10%] to-white dark:bg-gradient-to-b dark:from-purple/[10%] dark:to-transparent"
         id="services">
         <div class="container">
             <div class="grid grid-cols-1" data-aos="fade-up">
