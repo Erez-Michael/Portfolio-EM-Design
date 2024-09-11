@@ -1,7 +1,7 @@
 <template>
   <div id="about">
 
-    <section class="relative py-16 md:py-24 2xl:mt-12">
+    <section class="relative py-16 md:py-24 2xl:mt-12 bg-gradient-to-b from-purple/[15%] to-white dark:bg-none">
       <div class="container">
         <div class="flex flex-col">
           <div class="flex flex-col justify-between 2xl:items-center sm:flex-row">
