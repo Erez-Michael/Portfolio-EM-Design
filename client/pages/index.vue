@@ -16,7 +16,6 @@
     <section id="testimonials">
       <Testimonials />
     </section>
-
     <ButtonScrollToTop />
     <Footer />
 

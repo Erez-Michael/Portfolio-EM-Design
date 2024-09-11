@@ -62,7 +62,6 @@
                         right audience.</p>
                 </div>
             </div>
-            <Skill />
         </div>
     </section>
 </template>

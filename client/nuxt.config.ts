@@ -13,9 +13,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }]
     },
   },
-  modules: [
-    '@nuxt/image',
-  ],
+  modules: ['@nuxt/image', "nuxt-marquee"],
   css: [
     "~/assets/css/style.css",
     "~/assets/css/tailwind.css",
@@ -23,7 +21,7 @@ export default defineNuxtConfig({
   plugins: [
     { src: "~/plugins/alpine.ts", mode: "client" },
     { src: "~/plugins/gsap.client.ts", mode: "client" },
-    { src: "~/plugins/vue-scrollto.client.ts", mode: "client" } 
+    { src: "~/plugins/vue-scrollto.client.ts", mode: "client" },
   ],  
   build: {
     transpile: ["vue-countup-v3"],
