@@ -9,7 +9,7 @@
 
                     </div>
                     <h2 class="font-semibold text-[26px]/normal mt-7">Showcasing My Remarkable Projects</h2>
-                    <p class="mt-5 text-gray max-w-[708px] mx-auto">We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning .</p>
+                    <p class="mt-5 text-gray max-w-[708px] mx-auto">Crafting digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning .</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 mt-14 gap-7">

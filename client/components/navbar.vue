@@ -187,8 +187,7 @@ onUnmounted(() => {
 }
 
 .active-link {
-  transform: translateY(10px); /* Moves the element 10px downward */
-  transition: transform 0.3s ease; /* Adds a smooth transition */
+
 
 }
 
