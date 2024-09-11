@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         // Open Graph meta tags
         { property: 'og:title', content: 'EM Design | Portfolio' },
         { property: 'og:description', content: 'Explore the portfolio of EM Design, showcasing creative projects and design works.' },
-        { property: 'og:image', content: '/images/favicon-64x64.png' },  
+        { property: 'og:image', content: '/favicon-64x64.png' },  
         { property: 'og:url', content: 'https://portfolio-em-design.vercel.app/' }, 
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'EM Design' },
