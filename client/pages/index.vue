@@ -85,16 +85,7 @@ onUnmounted(() => {
 });
 
 
-useHead({
-    title: "EM Design | Portfolio",
-})
-useServerSeoMeta({
-    title: "EM Design | Portfolio",
-    ogTitle: "EM Design | Portfolio",
-    description: "EM Design | Portfolio.",
-    ogDescription: " EM Design | Portfolio",
-    ogImage: ""
-})
+
 </script>
 
 <style scoped>
