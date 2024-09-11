@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'EM Design' },
 
         // Twitter Card meta tags
-        { name: 'twitter:card', content: 'https://portfolio-em-design.vercel.app/favicon-64x64.png'' },
+        { name: 'twitter:card', content: ''},
         { name: 'twitter:title', content: 'EM Design | Portfolio' },
         { name: 'twitter:description', content: 'Explore the portfolio of EM Design, showcasing creative projects and design works.' },
         { name: 'twitter:image', content: 'https://portfolio-em-design.vercel.app/favicon-64x64.png' }, // Use the same absolute path
