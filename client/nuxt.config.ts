@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'EM Design - Personal Portfolio' },
         { name: 'keywords', content: 'EM Design, Personal Portfolio, Web Design, Graphic Design' },
-        { name: 'author', content: 'EMDesigns Themes' },
+        { name: 'author', content: 'EMDesigns' },
 
         // Open Graph meta tags
         { property: 'og:title', content: 'EM Design | Portfolio' },
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'EM Design' },
 
         // Twitter Card meta tags
-        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:card', content: 'https://portfolio-em-design.vercel.app/favicon-64x64.png'' },
         { name: 'twitter:title', content: 'EM Design | Portfolio' },
         { name: 'twitter:description', content: 'Explore the portfolio of EM Design, showcasing creative projects and design works.' },
         { name: 'twitter:image', content: 'https://portfolio-em-design.vercel.app/favicon-64x64.png' }, // Use the same absolute path
