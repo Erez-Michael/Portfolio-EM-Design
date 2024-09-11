@@ -7,14 +7,14 @@ export default defineNuxtConfig({
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'EM Design - Personal Portfolio' },
-        { name: 'keywords', content: 'nuxt 3, tailwind css, portfolio, personal website, template' },
+        { name: 'keywords', content: 'EM Design - Personal Portfolio' },
         { name: 'author', content: 'EMDesigns Themes' },
 
         // Open Graph meta tags
         { property: 'og:title', content: 'EM Design | Portfolio' },
         { property: 'og:description', content: 'Explore the portfolio of EM Design, showcasing creative projects and design works.' },
         { property: 'og:image', content: '@/assets/images/favicon-64x64.png' },  
-        { property: 'og:url', content: 'https://yourwebsite.com' }, 
+        { property: 'og:url', content: 'https://portfolio-em-design.vercel.app/' }, 
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'EM Design' },
 
