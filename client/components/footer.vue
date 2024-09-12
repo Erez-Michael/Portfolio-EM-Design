@@ -100,7 +100,7 @@ onUnmounted(() => {
                 </div>
             </div>
         </div>
-        <div class="bg-[url(../images/footer-bg.svg)] bg-[center_top] bg-cover pt-24">
+        <div class="bg-[url(../images/footer-bg.png)] bg-[center_top] bg-cover pt-24">
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     <div class="text-white">
