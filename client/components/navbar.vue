@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
+  <div class="fixed top-0 z-999 w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
     <div class="container relative">
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
