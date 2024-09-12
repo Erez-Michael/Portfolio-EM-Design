@@ -15,7 +15,7 @@
       <!-- Parent Wrapper with Relative Position -->
       <div class="relative max-w-[1000px] mx-auto mt-14">
         <!-- Cover Gradient Overlay for Marquees -->
-        <div class="absolute inset-0 sm:dark:bg-[linear-gradient(90deg,_#111125_5%,_transparent_50%,_#111125_95%)] pointer-events-none z-20"></div>
+        <div class="absolute inset-0 sm:dark:bg-[linear-gradient(90deg,_#111125_5%,_transparent_50%,_#111125_95%)] pointer-events-none z-30"></div>
 
 
         <!-- Marquees for Both Mobile and Desktop -->

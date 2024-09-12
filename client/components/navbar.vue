@@ -1,9 +1,9 @@
 <template>
-  <div class="fixed top-0 z-999 w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
+<div class="fixed top-0 z-[999] w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
     <div class="container relative">
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
-          <div class="relative z-50">
+    <div class="relative z-[999]">
             <a href="#">
               <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-10" />
             </a>
@@ -34,7 +34,7 @@
       <!-- Mobile Menu -->
       <div
         :class="{ 'translate-x-0': menuVisible, 'translate-x-full': !menuVisible && isClosing }"
-        class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-50 transition-transform duration-300 ease-in-out"
+  class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-[999] transition-transform duration-300 ease-in-out"
         ref="mobileMenu"
       >
         <div class="border-b border-primary-gray1">
@@ -43,12 +43,12 @@
             <img
               src="@/assets/images/logo-dark.svg"
               alt="Logo"
-              class="fixed top-8 left-5 h-8 md:h-10 z-40 block dark:hidden"
+        class="fixed top-8 left-5 h-8 md:h-10 z-[999] block dark:hidden"
             />
             <img
               src="@/assets/images/logo-light.svg"
               alt="Logo"
-              class="fixed top-8 left-5 h-8 md:h-10 z-40 hidden dark:block"
+        class="fixed top-8 left-5 h-8 md:h-10 z-[999] hidden dark:block"
             />
           </a>
         </div>
