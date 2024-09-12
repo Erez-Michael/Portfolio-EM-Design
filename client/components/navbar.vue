@@ -1,9 +1,9 @@
 <template>
-<div class="fixed top-0 z-[999] w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
+  <div class="fixed top-0 z-50 w-full py-7 transition-colors duration-300 ease bg-dark" id="navbar">
     <div class="container relative">
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
-    <div class="relative z-[999]">
+          <div class="relative z-40">
             <a href="#">
               <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-10" />
             </a>
@@ -34,7 +34,7 @@
       <!-- Mobile Menu -->
       <div
         :class="{ 'translate-x-0': menuVisible, 'translate-x-full': !menuVisible && isClosing }"
-  class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-[999] transition-transform duration-300 ease-in-out"
+        class="lg:hidden mobile-menu fixed py-20 top-0 left-0 w-full h-full bg-white dark:bg-dark z-40 transition-transform duration-300 ease-in-out"
         ref="mobileMenu"
       >
         <div class="border-b border-primary-gray1">
@@ -43,12 +43,12 @@
             <img
               src="@/assets/images/logo-dark.svg"
               alt="Logo"
-        class="fixed top-8 left-5 h-8 md:h-10 z-[999] block dark:hidden"
+              class="fixed top-8 left-5 h-8 md:h-10 z-40 block dark:hidden"
             />
             <img
               src="@/assets/images/logo-light.svg"
               alt="Logo"
-        class="fixed top-8 left-5 h-8 md:h-10 z-[999] hidden dark:block"
+              class="fixed top-8 left-5 h-8 md:h-10 z-40 hidden dark:block"
             />
           </a>
         </div>
@@ -77,8 +77,9 @@
 </template>
 
 
+
 <script setup>
-import { ref, provide, onMounted, onUnmounted } from 'vue';
+import { ref, provide, onMounted, onUnmounted, watch } from 'vue';
 import gsap from 'gsap';
 
 // Define menu items for navigation
@@ -108,6 +109,15 @@ const scrollToSection = (href) => {
   }
 };
 
+// Watch for changes in menu visibility to enable or disable scrolling
+watch(menuVisible, (visible) => {
+  if (visible) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+});
+
 // Function to handle menu item click
 const handleMenuItemClick = (href) => {
   isClosing.value = true;
@@ -122,7 +132,6 @@ const handleMenuItemClick = (href) => {
     }
   });
   scrollToSection(href);
-  enableScroll();
 };
 
 // Function to check active link
@@ -132,11 +141,11 @@ const isActive = (href) => {
 
 // Function to enable and disable scrolling
 const disableScroll = () => {
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('no-scroll');
 };
 
 const enableScroll = () => {
-  document.body.style.overflow = '';
+  document.body.classList.remove('no-scroll');
 };
 
 // Function to reset the menu button to hamburger state
@@ -178,8 +187,8 @@ onUnmounted(() => {
   if (observer.value) observer.value.disconnect();
   enableScroll();
 });
-</script>
 
+</script>
 <style scoped>
 .link {
   @apply text-white text-sm lg:text-[16px] relative justify-center overflow-hidden uppercase tracking-widest;
@@ -215,5 +224,10 @@ onUnmounted(() => {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow: hidden; 
+}
+
+body.no-scroll {
+  overflow: hidden !important; 
 }
 </style>

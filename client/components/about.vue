@@ -55,26 +55,27 @@
               </div>
             </div>
             <div
-              class="w-full h-full md:max-w-[380px] 2xl:max-w-[420px] flex flex-col justify-center items-center my-10 2xl:my-0">
+              class="w-full h-full lg:max-w-[380px] 2xl:max-w-[420px] flex flex-col justify-center items-center my-10 2xl:my-0">
               <!-- Portrait Mobile -->
               <nuxt-img src="/images/portrait.webp" class="flex lg:hidden w-full" loading="lazy" alt="portrait" />
               <!-- Portrait Desktop -->
               <nuxt-img src="/images/portrait.webp" class="hidden lg:flex w-full 2xl:max-w-[420px]" loading="lazy"
                 alt="portrait" />
 
-              <div class="w-full flex justify-between gap-4 mt-4">
+              <div class="w-full flex justify-center items-center gap-4 mt-4">
                 <a href="javascript:;"
-                  class="flex justify-center items-center gap-2 btn btn-purple text-2xl md:text-lg 2xl:text-xl w-1/2 whitespace-nowrap">
+                  class="flex justify-center items-center gap-2 btn btn-purple text-lg md:text-lg 2xl:text-xl w-full  whitespace-nowrap">
                   <IconsHireMe />
                   Hire Me
                 </a>
                 <a href="javascript:;"
-                  class="flex justify-center items-center gap-2 btn btn-outline-white text-2xl md:text-lg 2xl:text-xl w-1/2 whitespace-nowrap">
+                  class="flex justify-center items-center gap-2 btn btn-outline-white text-lg md:text-lg 2xl:text-xl w-full whitespace-nowrap">
                   <IconsDownload />
-                  Download CV
+                  Resume
                 </a>
               </div>
             </div>
+
           </div>
         </div>
       </div>

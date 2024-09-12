@@ -1,5 +1,5 @@
 <template>
-  <button @click="handleButtonClick" class="fixed top-4 right-5 bg-transparent p-2 border-none z-[999]">
+  <button @click="handleButtonClick" class="fixed top-4 right-5 bg-transparent p-2 border-none z-50">
     <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
       <path d="M1,2 L11,2" class="stroke-primary-gray3 stroke-[1] bar-1"></path>
       <path d="M1,5 L11,5" class="stroke-primary-gray2 stroke-[1] bar-2"></path>

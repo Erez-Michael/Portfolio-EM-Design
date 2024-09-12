@@ -68,7 +68,7 @@ const testimonials = [
 
 <template>
   <!-- Start Testimonial -->
-  <section class="pt-36 md:py-36 client-review bg-gradient-to-b from-purple/[10%] to-white dark:bg-gradient-to-b dark:from-purple/[10%] dark:to-transparent" id="testimonials">
+  <section class="pt-36 md:py-36 client-review bg-gradient-to-b from-purple/[10%] to-white dark:bg-gradient-to-b dark:from-transparent dark:via-purple/[18%] dark:to-transparent" id="testimonials">
     <div class="container">
       <div class="grid grid-cols-1">
         <div class="items-end justify-between lg:flex space-y-7 lg:space-y-0" data-aos="fade-up">

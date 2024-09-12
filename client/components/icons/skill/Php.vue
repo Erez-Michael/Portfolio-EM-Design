@@ -1,6 +1,6 @@
 <template>
 
-<svg height="100" width="150" viewBox="0 0 700 300" fill="none" >
+<svg height="100" width="100" viewBox="0 0 700 300" fill="none">
   
 
   <g id="g3438" transform="matrix(1.25,0,0,-1.25,-4.4,394.29875)">
