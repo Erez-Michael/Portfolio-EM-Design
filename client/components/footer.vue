@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
+
+
 const isOpen = ref(false);
 const container = ref<HTMLElement | null>(null);
 const currentYear = ref<number>(new Date().getFullYear());
@@ -28,15 +30,18 @@ onUnmounted(() => {
 </script>
 <template>
     <!-- Start Footer -->
-    <footer class="bg-dark dark:bg-gradient-to-t dark:from-transparent  dark:to-dark"
-        id="contact">
+    <footer class="bg-dark dark:bg-gradient-to-t dark:from-transparent  dark:to-dark" id="contact">
         <div class="py-16">
             <div class="container">
-                <div class="grid items-center grid-cols-1 md:grid-cols-2 gap-7">
+                <div class="flex-1 gap-7">
                     <div class="text-white">
-                        <h3 class="font-bold text-3xl/normal lg:text-[40px]/normal max-w-xl">Let's build something
-                            exceptional together.</h3>
-                        <div class="inline-block mt-8 md:mt-14" x-data="{ isOpen: false }">
+                        <div class="flex flex-col-reverse lg:flex-row justify-evenly items-center">
+
+                            <h3 class="font-bold mt-12 lg:mt-0 text-3xl/normal lg:text-[40px]/normal">Let's build something exceptional together.</h3>
+                                <img src="@/assets/images/website-under-construction.webp" alt="Website Under Construction" class="mt-6 rounded-lg shadow-lg" />
+                            </div>
+                                
+                        <!-- <div class="inline-block mt-8 md:mt-14" x-data="{ isOpen: false }">
                             <button type="button" class="flex items-center gap-2.5 btn btn-purple"
                                 @click="isOpen = true">
                                 Say Hello
@@ -62,11 +67,12 @@ onUnmounted(() => {
                                                     fill="currentColor"></path>
                                             </svg>
                                         </button>
-                                        <div class="max-w-[480px]">
-                                            <h3 class="text-2xl font-bold text-dark md:text-3xl/normal">Got Ideas? We've
-                                                got the skills. Let's team up.</h3>
-                                            <p class="mt-5 text-gray">Tell us more about yourself and what you're got in
-                                                mind.</p>
+                                        <div class="max-w-[600px]">
+                                            <h3 class="text-2xl font-bold text-dark md:text-3xl/normal">Got a Project in
+                                                Mind? Let's Collaborate!</h3>
+                                            <p class="mt-5 text-gray">I'd love to hear more about your ideas and goals.
+                                            </p>
+
                                         </div>
                                         <form class="mt-8 md:mt-12">
                                             <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -94,11 +100,11 @@ onUnmounted(() => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
-            </div>
+            </div>+
         </div>
         <div class="bg-[url(../images/footer-bg.png)] bg-[center_top] bg-cover pt-24">
             <div class="container">

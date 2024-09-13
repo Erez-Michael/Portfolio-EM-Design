@@ -32,38 +32,33 @@ const nextSlide = () => {
 // Testimonial data
 const testimonials = [
   {
-    project: "Ludmer Engineering - Quebec",
-    clientName: "John Doe",
-    company: "Ludmer Engineering",
-    feedback:
-      "The team provided a highly efficient design solution that helped us streamline our processes significantly. Their attention to detail and understanding of our needs were exceptional.",
-    image: "",
-  },
-  {
     project: "Duchesnay - Canada",
-    clientName: "Emily Smith",
+    clientName: "Duchesnay - Canada",
     company: "Duchesnay",
     feedback:
-      "Working with them on the fertility app was an empowering experience. They understood our vision and translated it into a beautiful, user-friendly app that our users love.",
+      "EM Design brought our vision to life with a beautifully designed, user-friendly app that has significantly improved engagement with our audience. Their attention to detail and understanding of our needs were outstanding.",
+    image: "",
+  },  
+  {
+    project: "Ludmer Engineering - Quebec",
+    clientName: "Mordechai Ludmer",
+    company: "Ludmer Engineering",
+    feedback:
+      "EM Design provided a streamlined design solution tailored to our requirements, making our operations more efficient and effective. The team's professionalism and creativity were evident in every step of the process.",
     image: "",
   },
   {
     project: "Analog Pharma - Canada",
-    clientName: "Michael Johnson",
+    clientName: "Analog Pharma - Canada",
     company: "Analog Pharma",
     feedback:
-      "The project surpassed all our expectations. The creativity and strategy involved in creating this application were unparalleled. A brilliant job by a brilliant team!",
+      "EM Design's creative approach and strategic execution exceeded all expectations, delivering a final product that has elevated our brand and resonated with our target audience. A truly impressive collaboration!",
     image: "",
-  },
-  {
-    project: "Sefon Surfboards - Peru",
-    clientName: "Carlos Ruiz",
-    company: "Sefon Surfboards",
-    feedback:
-      "Our surfboards never looked better online! The website truly captures the spirit of our brand and has been a huge hit with our customers. Highly recommended!",
-    image: "",
-  },
+  }
 ];
+
+
+
 </script>
 
 <template>
@@ -108,9 +103,9 @@ const testimonials = [
       >
         <SwiperSlide v-for="(testimonial, index) in testimonials" :key="index">
           <div class="border-2 border-gray/[14%] md:flex-row flex-col p-5 flex items-start gap-7">
-            <div class="shrink-0">
+            <!-- <div class="shrink-0">
               <img :src="testimonial.image" :alt="testimonial.clientName" />
-            </div>
+            </div> -->
             <div>
               <p class="font-medium leading-8 italic">"{{ testimonial.feedback }}"</p>
               <p class="mt-8 font-semibold">{{ testimonial.clientName }}</p>

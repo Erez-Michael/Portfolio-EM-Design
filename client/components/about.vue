@@ -1,7 +1,6 @@
 <template>
   <div id="about">
-
-    <section class="relative py-16 md:py-24 2xl:mt-12 bg-gradient-to-b from-purple/[15%] to-white dark:bg-none">
+    <section class="relative py-16 md:py-24  bg-gradient-to-b from-purple/[15%] to-white dark:bg-none">
       <div class="container">
         <div class="flex flex-col">
           <div class="flex flex-col justify-between 2xl:items-center sm:flex-row">
@@ -62,24 +61,27 @@
               <nuxt-img src="/images/portrait.webp" class="hidden lg:flex w-full 2xl:max-w-[420px]" loading="lazy"
                 alt="portrait" />
 
+              <!-- Action Buttons -->
               <div class="w-full flex justify-center items-center gap-4 mt-4">
-                <a href="javascript:;"
-                  class="flex justify-center items-center gap-2 btn btn-purple text-lg md:text-lg 2xl:text-xl w-full  whitespace-nowrap">
-                  <IconsHireMe />
-                  Hire Me
+                <a href="mailto:erezmichael01@gmail.com" class="flex justify-center items-center gap-2 btn btn-purple text-lg md:text-lg 2xl:text-xl w-full whitespace-nowrap">
+                  <IconsHireMe /> Hire Me
                 </a>
-                <a href="javascript:;"
-                  class="flex justify-center items-center gap-2 btn btn-outline-white text-lg md:text-lg 2xl:text-xl w-full whitespace-nowrap">
-                  <IconsDownload />
-                  Resume
+                <!-- Button to open PDF in a new tab -->
+                <a
+                  href="/docs/ErezMichael_CV_FR.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex justify-center items-center gap-2 btn btn-outline-white text-lg md:text-lg 2xl:text-xl w-full whitespace-nowrap"
+                >
+                  <IconsDownload /> Resume
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
+
     <section
       class="relative py-2 md:py-48 lg:py-24  border-t-2 bg-gradient-to-b from-white to-purple/[10%]  dark:bg-gradient-to-t dark:from-purple/[10%] border-gray/[8%] dark:border-white/[12%]"
       id="about">
@@ -135,46 +137,38 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import Typed from 'typed.js';
-
-// References for the h1 and p elements
+// Typed.js references
 const typedElement = ref(null);
 const typedParagraph = ref(null);
 let typedInstance1 = null;
 let typedInstance2 = null;
 
-// Initialize Typed.js on component mount
+
+// Initialize Typed.js on mount
 onMounted(() => {
-  // Typed.js for the h1 element
   typedInstance1 = new Typed(typedElement.value, {
-    strings: ['Freelance Web Developer'], // The text to be typed
-    typeSpeed: 80, // Typing speed in milliseconds
-    showCursor: false, // Hides the cursor after typing
-    loop: false, // No looping, type only once
+    strings: ['Freelance Web Developer'],
+    typeSpeed: 80,
+    showCursor: false,
+    loop: false,
   });
 
   typedInstance2 = new Typed(typedParagraph.value, {
-    strings: [
-      'Passionate Web Developer specializing in creating dynamic, user-focused websites and applications that blend creativity with robust functionality.',
-    ],
-    typeSpeed: 5, // Typing speed in milliseconds for the paragraph
-    startDelay: 2500, // Optional: Delay start for the paragraph to begin after the heading
-    showCursor: false, // Hides the cursor after typing
-    loop: false, // No looping, type only once
+    strings: ['Passionate Web Developer specializing in creating dynamic, user-focused websites and applications that blend creativity with robust functionality.'],
+    typeSpeed: 5,
+    startDelay: 2500,
+    showCursor: false,
+    loop: false,
   });
 });
 
-// Cleanup Typed.js instances to avoid memory leaks
+// Cleanup Typed.js instances on unmount
 onUnmounted(() => {
-  if (typedInstance1) {
-    typedInstance1.destroy();
-  }
-  if (typedInstance2) {
-    typedInstance2.destroy();
-  }
+  if (typedInstance1) typedInstance1.destroy();
+  if (typedInstance2) typedInstance2.destroy();
 });
 </script>
 

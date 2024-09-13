@@ -18,8 +18,8 @@
     <div class="order-2 lg:order-1 lg:flex-1 flex flex-col justify-between gap-y-2 lg:gap-y-0">
       <!-- Text for larger screens -->
       <p :style="{ color: textColor }" class="text-[22px] font-bold hidden lg:block">{{ title }}</p>
-      <p class="font-bold text-2xl/normal md:text-3xl/normal lg:text-[40px]/normal mt-4 max-w-[550px]">{{ description }}</p>
-      <p class="text-gray w-full">{{ text }}</p>
+      <p class="font-bold text-2xl/tight md:text-3xl/tight lg:text-[40px]/tight mt-4 max-w-[770px]">{{ description }}</p>
+      <p class="text-gray w-full lg:max-w-[500px] 2xl:max-w-[700px] mt-6">{{ text }}</p>
       <!-- Button -->
       <div class="flex mt-8">
         <a :href="projectLink" target="_blank" rel="noopener noreferrer"

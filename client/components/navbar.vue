@@ -191,7 +191,7 @@ onUnmounted(() => {
 </script>
 <style scoped>
 .link {
-  @apply text-white text-sm lg:text-[16px] relative justify-center overflow-hidden uppercase tracking-widest;
+  @apply text-white text-sm lg:text-[16px] relative justify-center overflow-hidden uppercase tracking-widest hover:text-yellow;
   transition: color 0.3s ease, font-weight 0.5s ease;
 }
 
