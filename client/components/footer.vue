@@ -35,11 +35,20 @@ onUnmounted(() => {
             <div class="container">
                 <div class="flex-1 gap-7">
                     <div class="text-white">
-                        <div class="flex flex-col-reverse lg:flex-row justify-evenly items-center">
+                        <div class="flex flex-col-reverse lg:flex-row justify-center lg:justify-evenly items-center text-center lg:text-left">
+    <h3 class="font-bold mt-12 lg:mt-0 text-3xl/normal lg:text-[40px]/normal">
+        Let's build something exceptional 
+        <span class="relative inline-block">
+            together.
+            <svg class="absolute w-full h-[20px] -bottom-4 left-0" width="200" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 13 Q 60 -5, 195 15" stroke="#ffffff" fill="transparent" stroke-width="2.5" />
+            </svg>
+        </span>
+    </h3>
+    <img src="@/assets/images/website-under-construction.webp" alt="Website Under Construction" class="mt-6 rounded-lg shadow-lg" />
+</div>
 
-                            <h3 class="font-bold mt-12 lg:mt-0 text-3xl/normal lg:text-[40px]/normal">Let's build something exceptional together.</h3>
-                                <img src="@/assets/images/website-under-construction.webp" alt="Website Under Construction" class="mt-6 rounded-lg shadow-lg" />
-                            </div>
+
                                 
                         <!-- <div class="inline-block mt-8 md:mt-14" x-data="{ isOpen: false }">
                             <button type="button" class="flex items-center gap-2.5 btn btn-purple"
@@ -104,7 +113,7 @@ onUnmounted(() => {
                     </div>
 
                 </div>
-            </div>+
+            </div>
         </div>
         <div class="bg-[url(../images/footer-bg.png)] bg-[center_top] bg-cover pt-24">
             <div class="container">
@@ -175,4 +184,9 @@ onUnmounted(() => {
     background: linear-gradient(to bottom, #6a0dad, #1a1a2e);
     /* Purple to dark gradient */
 }
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
 </style>

@@ -3,7 +3,7 @@
     <!-- Image Section -->
     <div class="xl:max-w-[670px] lg:max-w-[400px] w-full lg:order-2 order-1 relative">
       <!-- Diagonal Banner -->
-      <div v-if="inDevelopment" class="absolute right-0 bottom-0 lg:bottom-0 lg:left-0 lg:right-auto bg-red-900 text-white text-[12px] rounded-tl-2xl rounded-br-2xl lg:text-2xl font-bold px-4 py-1 z-10">
+      <div v-if="inDevelopment" class="absolute right-0 bottom-0 lg:bottom-0 lg:left-0 lg:right-auto bg-red-900 text-white text-[12px] rounded-tl-xl lg:rounded-tl-none lg:rounded-tr-2xl  lg:text-2xl font-bold px-4 py-1 z-10">
         In development
       </div>
 
