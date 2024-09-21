@@ -1,5 +1,8 @@
 <template>
   <div :class="['min-h-screen', theme === 'dark' ? 'bg-dark text-white' : 'bg-white text-dark']">
+    <!-- Loading Bar -->
+    <LoadingOverlay @loading-complete="handleLoadingComplete" />
+
     <!-- Navbar -->
     <Navbar :activeSection="activeSection" />
 
@@ -16,6 +19,7 @@
     <section id="testimonials">
       <Testimonials />
     </section>
+
     <ButtonScrollToTop />
     <Footer />
 
@@ -42,13 +46,22 @@ import 'aos/dist/aos.css';
 const theme = ref('dark'); 
 const observer = ref(null);
 const activeSection = ref('');
+const isLoading = ref(true);
 
+// Toggle between light and dark themes
 const toggleTheme = () => {
   theme.value = theme.value === 'light' ? 'dark' : 'light';
   document.documentElement.classList.toggle('dark', theme.value === 'dark');
 };
 
-// Initialize intersection observer
+// Handle loading completion
+const handleLoadingComplete = () => {
+  isLoading.value = false;
+  document.documentElement.style.overflow = ''; // Restore scrolling on html element
+  document.body.style.overflow = ''; // Restore scrolling on body element
+};
+
+// Initialize intersection observer to track active sections
 const initIntersectionObserver = () => {
   observer.value = new IntersectionObserver(
     (entries) => {
@@ -65,7 +78,12 @@ const initIntersectionObserver = () => {
   sections.forEach((section) => observer.value.observe(section));
 };
 
+// Set up on page load
 onMounted(() => {
+  // Disable scrolling on both html and body while the loading bar is active
+  document.documentElement.style.overflow = 'hidden'; // Hide scroll on html element
+  document.body.style.overflow = 'hidden'; // Hide scroll on body element
+
   if (theme.value === 'dark') {
     document.documentElement.classList.add('dark');
   } else {
@@ -80,12 +98,11 @@ onMounted(() => {
   initIntersectionObserver();
 });
 
+// Clean up on unmount or when the component is unloaded
 onUnmounted(() => {
-  if (observer.value) observer.value.disconnect();
+  document.documentElement.style.overflow = ''; // Restore scrolling on html element
+  document.body.style.overflow = ''; // Restore scrolling on body element
 });
-
-
-
 </script>
 
 <style scoped>

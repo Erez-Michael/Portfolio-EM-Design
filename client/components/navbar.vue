@@ -3,6 +3,7 @@
     <div class="container relative">
       <div class="flex items-center justify-between md:block">
         <div class="flex items-center justify-between w-full">
+          <BaseProgressBar />
           <div class="relative z-40">
             <a href="#">
               <img src="@/assets/images/logo-light.svg" alt="Logo" class="h-8 md:h-10" />
