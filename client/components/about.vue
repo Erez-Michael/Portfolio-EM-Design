@@ -61,7 +61,7 @@
                   <IconsHireMe /> Hire Me
                 </a>
                 <!-- Button to open PDF in a new tab -->
-                <a href="/docs/ErezMichael_CV_FR.pdf" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center gap-2 btn btn-outline-white text-lg md:text-lg 2xl:text-xl w-full whitespace-nowrap">
+                <a href="/docs/em-cv.pdf" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center gap-2 btn btn-outline-white text-lg md:text-lg 2xl:text-xl w-full whitespace-nowrap">
                   <IconsDownload /> Resume
                 </a>
               </div>
