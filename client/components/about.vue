@@ -3,8 +3,8 @@
     <section class="relative py-16 md:py-24 bg-gradient-to-b from-purple/[15%] to-white dark:bg-none">
       <div class="container">
         <div class="flex flex-col">
-          <div class="flex flex-col justify-between 2xl:items-center sm:flex-row">
-            <div class="w-full lg:w-2/3 my-24 lg:my-36 lg:pb-36" data-aos="fade-up">
+          <div class="flex flex-col justify-between  2xl:items-center sm:flex-row">
+            <div class="flex md:block flex-col items-center text-center  md:text-left tracking-wide w-full lg:w-2/3 my-24 lg:my-36 lg:pb-36" data-aos="fade-up">
               <BaseTitle text1="Hi! I'm" text2=" Erez Michael" :isInverted="true" maxWidth="360px" marginBottom="50px" />
               <div>
                 <!-- Typing effect for h1 -->
@@ -79,7 +79,7 @@
 
           <!-- Description text -->
           <div class="md:mt-7 lg:mt-0 lg:ml-5 lg:w-4/5 leading-loose">
-            <p class="text-gray">
+            <p class="text-gray text-center">
               I am a passionate web developer dedicated to building seamless and impactful digital experiences. From developing dynamic websites to crafting powerful backend solutions and setting up efficient content management systems, I focus on delivering high-quality, scalable results that drive success for your brand.
             </p>
           </div>
